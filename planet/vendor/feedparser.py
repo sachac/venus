@@ -2337,7 +2337,7 @@ class _HTMLSanitizer(_BaseHTMLProcessor):
       'aside', 'audio', 'b', 'big', 'blockquote', 'br', 'button', 'canvas',
       'caption', 'center', 'cite', 'code', 'col', 'colgroup', 'command',
       'datagrid', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'dir',
-      'div', 'dl', 'dt', 'em', 'event-source', 'fieldset', 'figure', 'footer',
+      'div', 'dl', 'dt', 'em', 'event-source', 'fieldset', 'figure', 'figcaption', 'track', 'footer',
       'font', 'form', 'header', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'i',
       'img', 'input', 'ins', 'keygen', 'kbd', 'label', 'legend', 'li', 'm', 'map',
       'menu', 'meter', 'multicol', 'nav', 'nextid', 'ol', 'output', 'optgroup',
@@ -2373,10 +2373,10 @@ class _HTMLSanitizer(_BaseHTMLProcessor):
 
     acceptable_css_properties = ['azimuth', 'background-color',
       'border-bottom-color', 'border-collapse', 'border-color',
-      'border-left-color', 'border-right-color', 'border-top-color', 'clear',
+      'border-left-color', 'border-right-color', 'border-top-color', 'box-shadow', 'clear',
       'color', 'cursor', 'direction', 'display', 'elevation', 'float', 'font',
       'font-family', 'font-size', 'font-style', 'font-variant', 'font-weight',
-      'height', 'letter-spacing', 'line-height', 'overflow', 'pause',
+      'height', 'letter-spacing', 'line-height', 'mix-blend-mode', 'overflow', 'pause',
       'pause-after', 'pause-before', 'pitch', 'pitch-range', 'richness',
       'speak', 'speak-header', 'speak-numeral', 'speak-punctuation',
       'speech-rate', 'stress', 'text-align', 'text-decoration', 'text-indent',
@@ -2430,7 +2430,7 @@ class _HTMLSanitizer(_BaseHTMLProcessor):
        'horiz-origin-x', 'id', 'ideographic', 'k', 'keyPoints', 'keySplines',
        'keyTimes', 'lang', 'mathematical', 'marker-end', 'marker-mid',
        'marker-start', 'markerHeight', 'markerUnits', 'markerWidth', 'max',
-       'min', 'name', 'offset', 'opacity', 'orient', 'origin',
+       'min', 'mix-blend-mode', 'name', 'offset', 'opacity', 'orient', 'origin',
        'overline-position', 'overline-thickness', 'panose-1', 'path',
        'pathLength', 'points', 'preserveAspectRatio', 'r', 'refX', 'refY',
        'repeatCount', 'repeatDur', 'requiredExtensions', 'requiredFeatures',
@@ -2452,7 +2452,7 @@ class _HTMLSanitizer(_BaseHTMLProcessor):
 
     acceptable_svg_properties = [ 'fill', 'fill-opacity', 'fill-rule',
       'stroke', 'stroke-width', 'stroke-linecap', 'stroke-linejoin',
-      'stroke-opacity']
+      'stroke-opacity', 'mix-blend-mode']
 
     def reset(self):
         _BaseHTMLProcessor.reset(self)
